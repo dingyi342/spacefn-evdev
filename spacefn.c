@@ -13,32 +13,35 @@
 
 // Key mapping {{{1
 unsigned int key_map(unsigned int code) {
-    switch (code) {
-        case KEY_BRIGHTNESSDOWN:    // my magical escape button
-            exit(0);
+  switch (code) {
+  case KEY_BRIGHTNESSDOWN:    // my magical escape button
+    exit(0);
 
-        case KEY_J:
-            return KEY_LEFT;
-        case KEY_K:
-            return KEY_DOWN;
-        case KEY_L:
-            return KEY_UP;
-        case KEY_SEMICOLON:
-            return KEY_RIGHT;
+  case KEY_H:
+    return KEY_LEFT;
+  case KEY_J:
+    return KEY_DOWN;
+  case KEY_K:
+    return KEY_UP;
+  case KEY_L:
+    return KEY_RIGHT;
 
-        case KEY_M:
-            return KEY_HOME;
-        case KEY_COMMA:
-            return KEY_PAGEDOWN;
-        case KEY_DOT:
-            return KEY_PAGEUP;
-        case KEY_SLASH:
-            return KEY_END;
+  /* case KEY_SEMICOLON: */
+  /*   return KEY_RIGHT; */
 
-        case KEY_B:
-            return KEY_SPACE;
-    }
-    return 0;
+  case KEY_M:
+    return KEY_HOME;
+  case KEY_COMMA:
+    return KEY_PAGEDOWN;
+  case KEY_DOT:
+    return KEY_PAGEUP;
+  case KEY_SLASH:
+    return KEY_END;
+
+  case KEY_B:
+    return KEY_SPACE;
+  }
+  return 0;
 }
 
 // Blacklist keys for which I have a mapping, to try and train myself out of using them
